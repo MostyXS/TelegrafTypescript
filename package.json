@@ -1,0 +1,43 @@
+{
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "debug": "nodemon dist/app.js --ignore ./configs/ --ignore ./temp/",
+    "serve": "pm2 start dist/app.js --restart-delay=10800000",
+    "start": "node dist/app.js",
+    "build": "tsc",
+    "logs": "pm2 logs",
+    "stop": "pm2 stop all"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "semi": false,
+    "singleQuote": true
+  },
+  "dependencies": {
+    "@types/cron": "^1.7.3",
+    "@types/ioredis": "^4.27.8",
+    "@types/jsdom": "^16.2.13",
+    "@types/request": "^2.48.7",
+    "cron": "^1.8.2",
+    "discord.js": "^13.3.0",
+    "dotenv": "^10.0.0",
+    "googleapis": "^92.0.0",
+    "input": "^1.0.1",
+    "jsdom": "^18.0.1",
+    "node-cmd": "^5.0.0",
+    "node-schedule": "^2.0.0",
+    "request": "^2.88.2",
+    "telegraf": "^4.4.2",
+    "telegraf-session-redis": "^5.1.0",
+    "telegram": "^2.8.4"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.1",
+    "nodemon": "^2.0.14",
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.4.4"
+  }
+}
